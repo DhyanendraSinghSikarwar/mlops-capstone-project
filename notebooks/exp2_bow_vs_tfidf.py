@@ -20,6 +20,9 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import scipy.sparse
 
+import nltk
+nltk.download('wordnet')
+
 import warnings
 warnings.simplefilter("ignore", UserWarning)
 warnings.filterwarnings("ignore")
