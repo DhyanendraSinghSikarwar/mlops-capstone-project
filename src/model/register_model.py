@@ -65,6 +65,10 @@ def register_model(model_name: str, model_info: dict):
             version=model_version.version,
             stage="Staging"
         )
+        latest_versions = client.get_latest_versions(name="my_model")
+
+        for v in latest_versions:
+            print(f"Version: {v.version}, Stage: {v.current_stage}")
         
         logging.debug(f'Model {model_name} version {model_version.version} registered and transitioned to Staging.')
     except Exception as e:
