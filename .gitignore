@@ -195,5 +195,4 @@ cython_debug/
 
 cred.txt
 local_s3/
-data/
 models/
