@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 import os
+import sys
 import re
 import nltk
 import string
@@ -11,6 +12,8 @@ from nltk.stem import WordNetLemmatizer
 from src.logger import logging
 nltk.download('wordnet')
 nltk.download('stopwords')
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 def preprocess_dataframe(df, col='text'):
     """

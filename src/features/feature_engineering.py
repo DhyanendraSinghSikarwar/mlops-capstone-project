@@ -2,11 +2,13 @@
 import numpy as np
 import pandas as pd
 import os
+import sys
 from sklearn.feature_extraction.text import CountVectorizer
 import yaml
 from src.logger import logging
 import pickle
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 def load_params(params_path: str) -> dict:
     """Load parameters from a YAML file."""

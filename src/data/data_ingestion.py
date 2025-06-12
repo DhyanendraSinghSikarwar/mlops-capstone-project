@@ -4,11 +4,14 @@ import pandas as pd
 pd.set_option('future.no_silent_downcasting', True)
 
 import os
+import sys
 from sklearn.model_selection import train_test_split
 import yaml
 from src.logger import logging
 import logging
 from src.connections import s3_connection
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 
 def load_params(params_path: str) -> dict:
