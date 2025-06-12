@@ -6,8 +6,8 @@ pd.set_option('future.no_silent_downcasting', True)
 import os
 from sklearn.model_selection import train_test_split
 import yaml
-import logging
 from src.logger import logging
+import logging
 from src.connections import s3_connection
 
 
